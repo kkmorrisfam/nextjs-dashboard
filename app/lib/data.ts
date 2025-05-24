@@ -42,8 +42,9 @@ export async function fetchLatestInvoices() {
     const latestInvoices = data.map((invoice) => ({
       ...invoice,
       amount: formatCurrency(invoice.amount),
+      
     }));
-    console.log(invoice);  //Invoice is an empty array[]
+    // console.log(invoice);  //Invoice is an empty array[]
     return latestInvoices;
   } catch (error) {
     console.error('Database Error:', error);
